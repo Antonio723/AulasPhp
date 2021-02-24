@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputs HTML</title>
+
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome_completo"  placeholder="Nome">
+
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idade" placeholder="idade" step="10" min="0" max="150" />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="E-Mail">
+        <button>Enviar</button>
+        
+        <p style="margin-bottom: 0px;">sexo</p>
+        <div>
+            <input type="radio" id="sexoF" name="sexo" value="feminino">
+            <label for="sexoF">Feminino</label>
+        </div>
+    
+        <div>
+            <input type="radio" id="sexoM" name="sexo" value="Masculino">
+            <label for="sexoO">Masculino</label>
+        </div>
+
+        <div>
+            <input type="radio" id="sexoO" name="sexo" value="Outros">
+            <label for="sexoM">Outros</label>
+        </div>
+
+        <p style="margin-bottom: 0px;">Hobbys</p>
+
+        <div>
+            <input type="checkbox" id="cantar" name="cantar" value="sim">
+            <label for="cantar">Cantar</label>
+        </div>
+        <div>
+            <input type="checkbox" id="programar" name="programar" value="sim">
+            <label for="programar">Programar</label>
+        </div>
+
+
+    </form>
+</body>
+</html>
