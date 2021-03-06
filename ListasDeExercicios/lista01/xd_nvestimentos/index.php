@@ -13,7 +13,7 @@
             <span>R$</span>
             <input style="height: 40px;" type="number" step="0.01" placeholder="Valor a ser convertido" name="valor_real" required>
         </div>
-        <p style="margin-bottom: 0px;;">moeda:</p>
+        <p style="margin-bottom: 0px;">moeda:</p>
         <div>
             <input type="radio" id="dolar" name="moeda" value="dolar">
             <label for="dolar">Dolar US$</label>

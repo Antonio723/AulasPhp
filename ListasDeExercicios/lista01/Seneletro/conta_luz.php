@@ -5,6 +5,13 @@ $endereco = $_GET["endereco"];
 $numero_endereco = $_GET["numero_endereco"];
 $consumo = $_GET["consumo"];
 
+$total_consumo = 0;
+if($consumo>=120){
+  $total_consumo = $consumo * 0.42;
+} else if($consumo > 0 && $consumo<120){
+  $total_consumo = $consumo * 0.32;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,29 +19,38 @@ $consumo = $_GET["consumo"];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles-global.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Calculo de Frete PHL</title>
 </head>
 
 <body>
+<h1>
+  <!-- Caso o consumo for acima de 120 kWh, o valor de cada kWh deverá ser 0,42 e 
+  consumo deve aparecer em vermelho.
+Caso o consumo for até de 120 kWh, o valor de cada kWh deverá ser 0,32 e consumo deve 
+aparecer em azul e mostrar uma mensagem: “Obrigado por economizar!”. -->
   <?php
-   if ($consumo > 120) {
+   if ($consumo >= 120) {
   ?>
-    <h1 style='color: #eed202'>
-        <p>Nome: $nome </p>
-        Conta de luz de FULANO DE TAL SANTOS.
-        Rua Flores das águas, 500.
-        Consumo: 200kWh.
-        Valor a pagar: R$ 84,00  
-    <?= number_format($custoPedagio, 2, ",", ".")?> </h1>
   <?php
-    } else {
+    echo"<h1>Conta de luz de $nome </h1>
+        <h1>$endereco, $numero_endereco</h1>
+        <h1> $consumo kWh</h1>
+        <h1>Consumo: R$ <span style='color: red'>$total_consumo</span> </h1>
+  </h1>"
   ?>
-    <h1>Valor dos pedágios: R$ <?= number_format($custoPedagio, 2, ",", ".")?> </h1>;
   <?php
-    }
+    } else if($consumo > 0 && $consumo<120){
   ?>
-  <h1>A viagem de <?= $origem ?> à <?= $destino ?> irá custar o valor total de R$
-    <em> <?= number_format($custoViagem, 2, ",", ".") ?> </em></h1>
+  <?php
+    echo"<h1>Conta de luz de $nome </h1>
+        <h1>$endereco, $numero_endereco</h1>
+        <h1> $consumo kWh</h1>
+        <h1>Consumo: R$ <span style='color: blue'>$total_consumo Obrigado por economizar!</span> </h1>
+  </h1>"
+  ?>
+  <?php
+    } 
+  ?>
 </body>
 </html>
