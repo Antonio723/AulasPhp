@@ -1,0 +1,39 @@
+16____________________________________
+criar uma tabela no banco chamada
+
+tbl_administrador
+
+com quatro colunas:
+
+id chave primária auto incremento,
+nome texto not null,
+usuario texto not null,
+senha texto not null
+
+https://sesisenaispedu.sharepoint.com/sites/DS1M-WEBBACK-END/Documentos%20Compartilhados/Aulas%20Turma%20A/logo.png
+https://teams.microsoft.com/l/file/18eed2bc-8e9a-45fa-b758-5dc2252b698b?tenantId=b1051c4b-3b94-41ab-9441-e73a72342fdd&fileType=pdf&objectUrl=https%3A%2F%2Fsesisenaispedu.sharepoint.com%2Fsites%2FDS1M-WEBBACK-END%2FDocumentos%20Compartilhados%2FAulas%20Turma%20A%2FSA.pdf&baseUrl=https%3A%2F%2Fsesisenaispedu.sharepoint.com%2Fsites%2FDS1M-WEBBACK-END&serviceName=teams&threadId=19:3c696b450e994dd3851d76a66883a114@thread.tacv2&messageId=1620385239253&groupId=660d406c-e0a0-4415-bb3f-2a29dc2f45a1
+_______________________________________
+
+
+17_____________________________________
+
+
+https://github.com/rafanleme/icatalogo-parte2-a.git
+
+
+
+18_____________________________________
+Criar a tabela de categorias.
+Fazer a inclusão, listagem e deleção de categorias.
+Proteger a página de categorias caso o usuário não estiver logado.
+DESAFIO: Na página de novo produto, fazer um <select> listando as categorias.
+
+https://icons.veryicon.com/png/o/construction-tools/coca-design/delete-189.png
+
+
+19___________________________________
+Fazer o upload de imagem no iCatalago.
+A imagem não pode ser maior que 2MB
+Depois de salvar a imagem, guardar no banco de dados o nome.
+
+DESAFIO: a imagem deve ser quadrada.
